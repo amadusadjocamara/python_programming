@@ -1,0 +1,64 @@
+from random import randint
+from time import sleep 
+while True:
+    print("{:=^40}".format(" GAME ROCK - PAPER - SCISSORS "))
+    possib_action = ("ROCK","PAPER","SCISSORS")
+    computer_action =randint(0,2)
+    print("")
+    print("""=======| YOUR OPTIONS |==========
+            [ 0 ] ROCK              |
+            [ 1 ] PAPER             |
+            [ 2 ] SCISSORS          |
+    =================================    
+    """)
+
+    user = int (input("Enter a choise: "))
+    print("")
+    print("process...")
+    sleep(1)
+    print("process...")
+    sleep(1)
+    print("="*20)
+    print("computer chose {}".format(possib_action[computer_action]))
+    print("you chose {}".format(possib_action[user]))
+    print("="*20)
+
+
+    if computer_action == 0:
+        if user == 0:
+            print("TIED GAME")
+        elif user == 1:
+            print("paper cover rock! YOU WIN.")
+        elif user == 2:
+            print("Rock smashes Scissors! YOU LOSE.")
+        else:
+            print("INVALID OPTION!")
+
+
+    elif computer_action == 1:
+        if user == 0:
+            print("paper cover rock! YOU LOSE.")
+        elif user == 1:
+            print("TIED GAME")
+        elif user == 2:
+            print("Scissors cuts paper! YOU WIN.{grinning face}")
+        else:
+            print("INVALID OPTION!")
+
+
+    elif computer_action == 2:
+        if user == 0:
+            print("Rock smashes Scissors! YOU WIN.{grinning face}")
+        elif user == 1:
+            print("Scisseors cuts Paper! YOU LOSE")
+        elif user == 2:
+            print("TIED GAME!")
+        else:
+            print("INVALID OPTION!")
+    print("")
+
+    pl_again = input("DO YOU LIKE TO TRY AGAIN?(yes/no)  ")
+    if pl_again != "yes":
+        break
+print("THANKS!")
+
