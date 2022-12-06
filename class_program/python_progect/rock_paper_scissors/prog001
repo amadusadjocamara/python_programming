@@ -1,6 +1,7 @@
 
 from random import randint
-from time import sleep 
+from time import sleep
+import emoji 
 while True:
     print("{:=^40}".format(" GAME ROCK - PAPER - SCISSORS "))
     possib_action = ("ROCK","PAPER","SCISSORS")
@@ -29,29 +30,29 @@ while True:
         if user == 0:
             print("TIED GAME")
         elif user == 1:
-            print("paper cover rock! YOU WIN.")
+            print("paper cover rock! YOU WIN." ,emoji.emojize("\U0001F606"))
         elif user == 2:
-            print("Rock smashes Scissors! YOU LOSE.")
+            print("Rock smashes Scissors! YOU LOSE.",emoji.emojize("\U+1F61C"))
         else:
             print("INVALID OPTION!")
 
 
     elif computer_action == 1:
         if user == 0:
-            print("paper cover rock! YOU LOSE.")
+            print("paper cover rock! YOU LOSE.", "U+1F61C")
         elif user == 1:
             print("TIED GAME")
         elif user == 2:
-            print("Scissors cuts paper! YOU WIN.{grinning face}")
+            print("Scissors cuts paper! YOU WIN.","\U0001F606")
         else:
             print("INVALID OPTION!")
 
 
     elif computer_action == 2:
         if user == 0:
-            print("Rock smashes Scissors! YOU WIN.{grinning face}")
+            print("Rock smashes Scissors! YOU WIN.","\U0001F606")
         elif user == 1:
-            print("Scisseors cuts Paper! YOU LOSE")
+            print("Scisseors cuts Paper! YOU LOSE", "U+1F61C")
         elif user == 2:
             print("TIED GAME!")
         else:
